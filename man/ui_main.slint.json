@@ -1,0 +1,68 @@
+{
+  "source": "ui/main.slint",
+  "items": [
+    {
+      "name": "voices",
+      "kind": "Property",
+      "signature": "in property <[string]> voices: [\"da_DK-talesyntese-medium\", \"en_US-lessac-medium\"];",
+      "line": 8,
+      "doc": ""
+    },
+    {
+      "name": "selected-voice",
+      "kind": "Property",
+      "signature": "in-out property <int> selected-voice: 0;",
+      "line": 10,
+      "doc": ""
+    },
+    {
+      "name": "speed",
+      "kind": "Property",
+      "signature": "in-out property <float> speed: 1.0;",
+      "line": 12,
+      "doc": ""
+    },
+    {
+      "name": "is-speaking",
+      "kind": "Property",
+      "signature": "in property <bool> is-speaking: false;",
+      "line": 14,
+      "doc": ""
+    },
+    {
+      "name": "status",
+      "kind": "Property",
+      "signature": "in property <string> status: \"Klar\";",
+      "line": 16,
+      "doc": ""
+    },
+    {
+      "name": "synthesize",
+      "kind": "Callback",
+      "signature": "callback synthesize(string);",
+      "line": 19,
+      "doc": ""
+    },
+    {
+      "name": "stop",
+      "kind": "Callback",
+      "signature": "callback stop();",
+      "line": 21,
+      "doc": ""
+    },
+    {
+      "name": "save-wav",
+      "kind": "Callback",
+      "signature": "callback save-wav(string);",
+      "line": 23,
+      "doc": ""
+    },
+    {
+      "name": "AppWindow",
+      "kind": "Component",
+      "signature": "export component AppWindow inherits Window {",
+      "line": 27,
+      "doc": ""
+    }
+  ]
+}

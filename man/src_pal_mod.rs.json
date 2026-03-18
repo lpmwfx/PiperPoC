@@ -1,0 +1,12 @@
+{
+  "source": "src/pal/mod.rs",
+  "items": [
+    {
+      "name": "audio_pal",
+      "kind": "Mod",
+      "signature": "pub mod audio_pal;",
+      "line": 4,
+      "doc": "Audio playback via cpal."
+    }
+  ]
+}

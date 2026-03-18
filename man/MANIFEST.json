@@ -1,0 +1,85 @@
+{
+  "project": "PiperPoC",
+  "files": [
+    {
+      "source": "src/adapter/mod.rs",
+      "item_count": 1,
+      "undocumented": 0
+    },
+    {
+      "source": "src/adapter/tts_adp.rs",
+      "item_count": 1,
+      "undocumented": 0
+    },
+    {
+      "source": "src/core/mod.rs",
+      "item_count": 1,
+      "undocumented": 0
+    },
+    {
+      "source": "src/core/synth_core.rs",
+      "item_count": 2,
+      "undocumented": 0
+    },
+    {
+      "source": "src/gateway/mod.rs",
+      "item_count": 2,
+      "undocumented": 0
+    },
+    {
+      "source": "src/gateway/piper_ffi_gtw.rs",
+      "item_count": 7,
+      "undocumented": 0
+    },
+    {
+      "source": "src/gateway/wav_gtw.rs",
+      "item_count": 1,
+      "undocumented": 0
+    },
+    {
+      "source": "src/pal/audio_pal.rs",
+      "item_count": 1,
+      "undocumented": 0
+    },
+    {
+      "source": "src/pal/desktop.rs",
+      "item_count": 1,
+      "undocumented": 0
+    },
+    {
+      "source": "src/pal/mod.rs",
+      "item_count": 1,
+      "undocumented": 0
+    },
+    {
+      "source": "src/shared/defaults_x.rs",
+      "item_count": 5,
+      "undocumented": 0
+    },
+    {
+      "source": "src/shared/mod.rs",
+      "item_count": 1,
+      "undocumented": 0
+    },
+    {
+      "source": "ui/globals/theme.slint",
+      "item_count": 7,
+      "undocumented": 7
+    },
+    {
+      "source": "ui/main.slint",
+      "item_count": 9,
+      "undocumented": 9
+    },
+    {
+      "source": "ui/tokens/durations.slint",
+      "item_count": 2,
+      "undocumented": 2
+    },
+    {
+      "source": "ui/tokens/sizes.slint",
+      "item_count": 7,
+      "undocumented": 7
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "source": "src/shared/defaults_x.rs",
+  "items": [
+    {
+      "name": "SPEECH_RATE",
+      "kind": "Const",
+      "signature": "pub const SPEECH_RATE: f32 = 1.0;",
+      "line": 2,
+      "doc": "Default speech rate (1.0 = normal speed)."
+    },
+    {
+      "name": "NOISE_SCALE",
+      "kind": "Const",
+      "signature": "pub const NOISE_SCALE: f32 = 0.667;",
+      "line": 5,
+      "doc": "Default noise scale for synthesis."
+    },
+    {
+      "name": "NOISE_W_SCALE",
+      "kind": "Const",
+      "signature": "pub const NOISE_W_SCALE: f32 = 0.8;",
+      "line": 8,
+      "doc": "Default noise-w scale for synthesis."
+    },
+    {
+      "name": "SAMPLE_RATE",
+      "kind": "Const",
+      "signature": "pub const SAMPLE_RATE: u32 = 22050;",
+      "line": 11,
+      "doc": "Sample rate from piper models in Hz."
+    },
+    {
+      "name": "MODELS_DIR",
+      "kind": "Const",
+      "signature": "pub const MODELS_DIR: &str = \"models\";",
+      "line": 14,
+      "doc": "Path to the models directory."
+    }
+  ]
+}

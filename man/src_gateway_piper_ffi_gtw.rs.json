@@ -1,0 +1,54 @@
+{
+  "source": "src/gateway/piper_ffi_gtw.rs",
+  "items": [
+    {
+      "name": "PiperSynthesizer",
+      "kind": "Struct",
+      "signature": "pub struct PiperSynthesizer",
+      "line": 13,
+      "doc": "Opaque C synthesizer handle."
+    },
+    {
+      "name": "PiperAudioChunk",
+      "kind": "Struct",
+      "signature": "pub struct PiperAudioChunk",
+      "line": 19,
+      "doc": "Audio chunk from piper_synthesize_next."
+    },
+    {
+      "name": "PiperSynthesizeOptions",
+      "kind": "Struct",
+      "signature": "pub struct PiperSynthesizeOptions",
+      "line": 34,
+      "doc": "Synthesis options passed to piper."
+    },
+    {
+      "name": "Piper",
+      "kind": "Struct",
+      "signature": "pub struct Piper",
+      "line": 69,
+      "doc": "Safe Rust wrapper around the piper C API."
+    },
+    {
+      "name": "new",
+      "kind": "Fn",
+      "signature": "pub fn new( model_path: &Path, espeak_data_path: &Path, ) -> Result<Self, String>",
+      "line": 79,
+      "doc": "Create a new Piper synthesizer from model files."
+    },
+    {
+      "name": "default_options",
+      "kind": "Fn",
+      "signature": "pub fn default_options(&self) -> PiperSynthesizeOptions",
+      "line": 103,
+      "doc": "Get default synthesis options for this voice."
+    },
+    {
+      "name": "synthesize",
+      "kind": "Fn",
+      "signature": "pub fn synthesize( &self, text: &str, options: Option<&PiperSynthesizeOptions>, ) -> Result<(Vec<f32>, i32), String>",
+      "line": 109,
+      "doc": "Synthesize text to a Vec of f32 samples. Returns (samples, sample_rate)."
+    }
+  ]
+}

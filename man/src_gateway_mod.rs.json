@@ -1,0 +1,19 @@
+{
+  "source": "src/gateway/mod.rs",
+  "items": [
+    {
+      "name": "piper_ffi_gtw",
+      "kind": "Mod",
+      "signature": "pub mod piper_ffi_gtw;",
+      "line": 4,
+      "doc": "FFI bindings to the piper C API."
+    },
+    {
+      "name": "wav_gtw",
+      "kind": "Mod",
+      "signature": "pub mod wav_gtw;",
+      "line": 6,
+      "doc": "WAV file export."
+    }
+  ]
+}

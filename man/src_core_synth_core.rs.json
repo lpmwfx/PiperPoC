@@ -1,0 +1,19 @@
+{
+  "source": "src/core/synth_core.rs",
+  "items": [
+    {
+      "name": "Voice",
+      "kind": "Struct",
+      "signature": "pub struct Voice",
+      "line": 10,
+      "doc": "Voice definition — model path + display name."
+    },
+    {
+      "name": "discover_voices",
+      "kind": "Fn",
+      "signature": "pub fn discover_voices(models_dir: &Path) -> Vec<Voice>",
+      "line": 17,
+      "doc": "Discover available voices from a models directory.\nLooks for `<dir>/<lang>/<name>.onnx` files."
+    }
+  ]
+}

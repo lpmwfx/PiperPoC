@@ -1,0 +1,54 @@
+{
+  "source": "ui/globals/theme.slint",
+  "items": [
+    {
+      "name": "background",
+      "kind": "Property",
+      "signature": "in property <brush> background: #1e1e2e;",
+      "line": 4,
+      "doc": ""
+    },
+    {
+      "name": "surface",
+      "kind": "Property",
+      "signature": "in property <brush> surface: #313244;",
+      "line": 6,
+      "doc": ""
+    },
+    {
+      "name": "primary",
+      "kind": "Property",
+      "signature": "in property <brush> primary: #89b4fa;",
+      "line": 8,
+      "doc": ""
+    },
+    {
+      "name": "accent",
+      "kind": "Property",
+      "signature": "in property <brush> accent: #f38ba8;",
+      "line": 10,
+      "doc": ""
+    },
+    {
+      "name": "text-primary",
+      "kind": "Property",
+      "signature": "in property <brush> text-primary: #cdd6f4;",
+      "line": 12,
+      "doc": ""
+    },
+    {
+      "name": "text-secondary",
+      "kind": "Property",
+      "signature": "in property <brush> text-secondary: #a6adc8;",
+      "line": 14,
+      "doc": ""
+    },
+    {
+      "name": "success",
+      "kind": "Property",
+      "signature": "in property <brush> success: #a6e3a1;",
+      "line": 16,
+      "doc": ""
+    }
+  ]
+}

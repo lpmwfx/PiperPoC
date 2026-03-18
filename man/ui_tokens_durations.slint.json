@@ -1,0 +1,19 @@
+{
+  "source": "ui/tokens/durations.slint",
+  "items": [
+    {
+      "name": "fast",
+      "kind": "Property",
+      "signature": "in property <duration> fast: 150ms;",
+      "line": 4,
+      "doc": ""
+    },
+    {
+      "name": "normal",
+      "kind": "Property",
+      "signature": "in property <duration> normal: 300ms;",
+      "line": 6,
+      "doc": ""
+    }
+  ]
+}

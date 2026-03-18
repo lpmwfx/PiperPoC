@@ -1,0 +1,54 @@
+{
+  "source": "ui/tokens/sizes.slint",
+  "items": [
+    {
+      "name": "spacing-xs",
+      "kind": "Property",
+      "signature": "in property <length> spacing-xs: 4px;",
+      "line": 4,
+      "doc": ""
+    },
+    {
+      "name": "spacing-sm",
+      "kind": "Property",
+      "signature": "in property <length> spacing-sm: 8px;",
+      "line": 6,
+      "doc": ""
+    },
+    {
+      "name": "spacing-md",
+      "kind": "Property",
+      "signature": "in property <length> spacing-md: 16px;",
+      "line": 8,
+      "doc": ""
+    },
+    {
+      "name": "spacing-lg",
+      "kind": "Property",
+      "signature": "in property <length> spacing-lg: 24px;",
+      "line": 10,
+      "doc": ""
+    },
+    {
+      "name": "spacing-xl",
+      "kind": "Property",
+      "signature": "in property <length> spacing-xl: 32px;",
+      "line": 12,
+      "doc": ""
+    },
+    {
+      "name": "border-radius",
+      "kind": "Property",
+      "signature": "in property <length> border-radius: 8px;",
+      "line": 14,
+      "doc": ""
+    },
+    {
+      "name": "input-height",
+      "kind": "Property",
+      "signature": "in property <length> input-height: 40px;",
+      "line": 16,
+      "doc": ""
+    }
+  ]
+}

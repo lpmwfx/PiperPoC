@@ -1,0 +1,12 @@
+{
+  "source": "src/adapter/mod.rs",
+  "items": [
+    {
+      "name": "tts_adp",
+      "kind": "Mod",
+      "signature": "pub mod tts_adp;",
+      "line": 4,
+      "doc": "TTS callback wiring between Slint UI and backend."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+# PHASES: PiperPoC
+
+## Active
+
+- phase: 1
+  id: setup
+  title: "Project setup"
+  milestone: "Project scaffolded, builds, scans clean"
+  delivers:
+    - Project structure
+    - Build configuration
+    - Scanner integration
+  status: active
+
+## Planned
+
+- phase: 2
+  id: core
+  title: "Core functionality"
+  milestone: "Primary feature functional"
+  delivers:
+    - (define deliverables)
+  status: planned
+
+# --- DONES ---

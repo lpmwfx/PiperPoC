@@ -1,0 +1,12 @@
+{
+  "source": "src/core/mod.rs",
+  "items": [
+    {
+      "name": "synth_core",
+      "kind": "Mod",
+      "signature": "pub mod synth_core;",
+      "line": 4,
+      "doc": "Voice discovery and synthesis coordination."
+    }
+  ]
+}

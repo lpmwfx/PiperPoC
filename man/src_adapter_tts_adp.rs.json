@@ -1,0 +1,12 @@
+{
+  "source": "src/adapter/tts_adp.rs",
+  "items": [
+    {
+      "name": "wire_callbacks",
+      "kind": "Fn",
+      "signature": "pub fn wire_callbacks(ui: &AppWindow, models_dir: PathBuf, espeak_data_path: PathBuf)",
+      "line": 15,
+      "doc": "Wire all Slint callbacks for TTS functionality."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "source": "src/pal/desktop.rs",
+  "items": [
+    {
+      "name": "init",
+      "kind": "Fn",
+      "signature": "pub fn init()",
+      "line": 4,
+      "doc": "Initialize desktop platform."
+    }
+  ]
+}
