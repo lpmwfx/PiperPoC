@@ -1,0 +1,34 @@
+# RULES: piper-poc
+
+## Active Rules
+
+### Always
+- global/topology.md
+- global/module-tree.md
+- global/file-limits.md
+- global/config-driven.md
+- global/persistent-state.md
+
+### Language: Rust
+- rust/README.md
+
+### Language: Slint
+- slint/README.md
+
+### UI (Slint — Windows)
+- uiux/tokens.md
+- uiux/components.md
+- uiux/state-flow.md
+- uiux/file-structure.md
+- uiux/menus-slint.md
+- uiux/menus-windows.md
+- uiux/help-about.md
+- uiux/checklist.md
+
+## Project Rules
+
+(none yet — conventions will be added as patterns emerge)
+
+## Derived from FIXES
+
+(none yet)

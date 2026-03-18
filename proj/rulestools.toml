@@ -1,0 +1,5 @@
+[project]
+kind = "library"
+
+[scan]
+languages = ["rust", "slint"]

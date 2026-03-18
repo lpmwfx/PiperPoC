@@ -1,0 +1,138 @@
+import { Theme } from "globals/theme.slint";
+import { Sizes } from "tokens/sizes.slint";
+import { ComboBox, Button, Slider, TextEdit, ProgressIndicator } from "std-widgets.slint";
+
+/// Application state exposed to Rust.
+export global AppState {
+    /// List of available voice names.
+    in property <[string]> voices: ["da_DK-talesyntese-medium", "en_US-lessac-medium"];
+    /// Index of selected voice.
+    in-out property <int> selected-voice: 0;
+    /// Speech rate where 0.5 is fast and 2.0 is slow.
+    in-out property <float> speed: 1.0;
+    /// Whether synthesis is currently running.
+    in property <bool> is-speaking: false;
+    /// Status text shown to user.
+    in property <string> status: "Klar";
+
+    /// Synthesize text into speech audio.
+    callback synthesize(string);
+    /// Stop current playback.
+    callback stop();
+    /// Save synthesized audio as WAV file.
+    callback save-wav(string);
+}
+
+/// Main application window for Piper TTS testing.
+export component AppWindow inherits Window {
+    title: "Piper TTS PoC";
+    width: 700px;
+    height: 500px;
+    background: Theme.background;
+
+    VerticalLayout {
+        padding: Sizes.spacing-lg;
+        spacing: Sizes.spacing-md;
+
+        // Header
+        Text {
+            text: "Piper TTS PoC";
+            font-size: 24px;
+            color: Theme.text-primary;
+            horizontal-alignment: center;
+        }
+
+        // Voice selection row
+        HorizontalLayout {
+            spacing: Sizes.spacing-md;
+            alignment: stretch;
+
+            Text {
+                text: "Stemme:";
+                color: Theme.text-secondary;
+                vertical-alignment: center;
+                width: 80px;
+            }
+
+            voice-combo := ComboBox {
+                model: AppState.voices;
+                current-index <=> AppState.selected-voice;
+            }
+        }
+
+        // Speed slider row
+        HorizontalLayout {
+            spacing: Sizes.spacing-md;
+            alignment: stretch;
+
+            Text {
+                text: "Hastighed:";
+                color: Theme.text-secondary;
+                vertical-alignment: center;
+                width: 80px;
+            }
+
+            speed-slider := Slider {
+                minimum: 0.5;
+                maximum: 2.0;
+                value <=> AppState.speed;
+            }
+
+            Text {
+                text: "\{Math.round(AppState.speed * 100)}%";
+                color: Theme.text-secondary;
+                vertical-alignment: center;
+                width: 50px;
+            }
+        }
+
+        // Text input
+        text-input := TextEdit {
+            text: "Hej verden! Dette er en test af Piper tekst-til-tale.";
+            min-height: 150px;
+        }
+
+        // Action buttons
+        HorizontalLayout {
+            spacing: Sizes.spacing-md;
+            alignment: center;
+
+            speak-btn := Button {
+                text: AppState.is-speaking ? "Stop" : "▶  Tal";
+                enabled: true;
+                clicked => {
+                    if AppState.is-speaking {
+                        AppState.stop();
+                    } else {
+                        AppState.synthesize(text-input.text);
+                    }
+                }
+            }
+
+            save-btn := Button {
+                text: "💾  Gem WAV";
+                enabled: !AppState.is-speaking;
+                clicked => {
+                    AppState.save-wav(text-input.text);
+                }
+            }
+        }
+
+        // Status bar
+        HorizontalLayout {
+            spacing: Sizes.spacing-sm;
+            alignment: center;
+
+            if AppState.is-speaking: ProgressIndicator {
+                indeterminate: true;
+                width: 120px;
+            }
+
+            Text {
+                text: AppState.status;
+                color: AppState.is-speaking ? Theme.accent : Theme.success;
+                horizontal-alignment: center;
+            }
+        }
+    }
+}

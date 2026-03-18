@@ -1,0 +1,46 @@
+# TODO: scaffolding
+
+phase: 1
+id: scaffolding
+
+## Projekt-struktur
+
+- id: 1
+  task: Opret src/ topologi (adapter, core, gateway, shared) med mod.rs filer
+  pass: cargo build kompilerer med tom topologi
+  status: pending
+
+- id: 2
+  task: Opret FFI bindings til piper.h i src/gateway/piper_ffi_gtw.rs
+  pass: Rust typer matcher piper.h structs og funktioner
+  status: pending
+
+## Voice models
+
+- id: 3
+  task: Download da_DK-talesyntese-medium og en_US-lessac-medium ONNX modeller
+  pass: .onnx og .onnx.json filer i models/da/ og models/en/
+  status: pending
+
+## UI
+
+- id: 4
+  task: Færdiggør Slint UI (tekst input, voice valg, speed slider, status)
+  pass: slint_build::compile("ui/main.slint") bygger uden fejl
+  status: pending
+
+## Integration
+
+- id: 5
+  task: Wire Slint callbacks til adapter → core → gateway pipeline
+  pass: Tekst syntetiseres og afspilles via cpal
+  status: pending
+
+- id: 6
+  task: Implementer WAV-eksport via hound
+  pass: Gem-knap producerer valid .wav fil
+  status: pending
+
+## Blockers
+
+- piper1-gpl skal bygges fra source (CMake + espeak-ng + onnxruntime) — afklar build-strategi

@@ -1,0 +1,38 @@
+# PROJECT: piper-poc
+
+## Goal
+Slint-baseret GUI til at teste piper1-gpl tekst-til-tale motoren via dens C API.
+Brugeren skriver tekst, vælger stemme (dansk/engelsk) og hastighed, og hører resultatet.
+Understøtter også WAV-eksport. Formålet er at evaluere piper1-gpl som TTS-backend.
+
+## Stack
+- Language: Rust 2024 edition
+- UI: Slint 1.x (desktop)
+- Audio: cpal 0.15 (playback), hound 3.5 (WAV export)
+- TTS: piper1-gpl C API via FFI (piper.h)
+- Build scanners: RulesTools (rustscan + slintscan + rustdocumenter)
+
+## Structure
+- ui:      ui/ (Slint files — globals, tokens, views, components)
+- src:     src/ (Rust — adapter, core, gateway, shared)
+- models:  models/ (ONNX voice models — da_DK, en_US)
+- proj:    proj/
+- tools:   tools/
+
+## Method
+- Workflow: PROJECT → FIXES → TODO → code → test → DONE
+- Branching: feature branches off main
+- Testing: cargo test + manual TTS playback
+- Deploy: N/A (local PoC)
+
+## Patterns
+- piper-streaming: piper_synthesize_start → piper_synthesize_next loop for chunked audio
+- ffi-safety: all piper C calls wrapped in safe Rust types in gateway layer
+
+## Current
+- phase: 1
+- id: scaffolding
+- status: setup
+
+## History
+(none yet)

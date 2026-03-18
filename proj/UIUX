@@ -1,0 +1,64 @@
+# UIUX: piper-poc
+
+## Goal
+Simpel, funktionel desktop-app til at teste TTS. Mørkt tema, minimal UI.
+Brugeren skriver tekst, vælger stemme og hastighed, og trykker Tal.
+
+## Platform
+- OS: Windows 11
+- Toolkit: Slint 1.x
+- Icons: Emoji (PoC — ingen icon-pakke)
+
+## UI Foundation Rules
+
+| Rule | What it enforces |
+|------|-----------------|
+| uiux/tokens.md | Alle værdier er navngivne tokens — ingen literaler i komponenter |
+| uiux/components.md | Én fil per komponent, ét ansvar |
+| uiux/file-structure.md | Mapper per feature-område |
+| uiux/state-flow.md | State-in fra Adapter, events-out |
+| uiux/menus-slint.md | Native menuer via muda (hvis relevant) |
+| uiux/menus-windows.md | Windows platform-konventioner |
+| uiux/checklist.md | Pre-ship verifikation |
+
+## UI Architecture
+- Toolkit: Slint 1.x
+- Entry point: ui/main.slint → AppWindow
+- Globals: ui/globals/ (Theme)
+- Tokens: ui/tokens/ (Sizes, Durations)
+- State: AppState global i main.slint — Adapter ejer via set/get
+- Components: ui/components/ (fremtidige genbrugelige dele)
+- Views: ui/views/ (fremtidige feature-views)
+
+## Component Conventions
+- AppWindow er mother — ejer al state og layout
+- AppState global eksponerer in/in-out properties + callbacks til Rust
+- Alle farver fra Theme global, alle størelser fra Sizes global
+- Ingen hardkodede værdier i komponenter
+
+## User Flows
+
+### Primary Flow: Tekst-til-tale
+1. Bruger skriver tekst i TextEdit
+2. Vælger stemme fra ComboBox (da/en)
+3. Justerer hastighed med Slider
+4. Trykker "Tal" → status viser "Syntetiserer...", audio afspilles
+5. Trykker "Stop" under afspilning → stopper
+
+### Secondary Flow: WAV-eksport
+1. Bruger skriver tekst
+2. Trykker "Gem WAV" → filnavnsdialog → WAV gemmes
+
+## Layout
+
+### Main Window (700x500)
+- Header: Titel "Piper TTS PoC"
+- Controls: Voice ComboBox + Speed Slider
+- Content: TextEdit (150px min-height)
+- Actions: Tal/Stop + Gem WAV knapper
+- Footer: Status tekst + progress indicator
+
+## Interaction Patterns
+- Loading: ProgressIndicator (indeterminate) under syntese
+- Status: Tekst-label skifter farve (grøn=klar, rød=aktiv)
+- Buttons: Tal-knap skifter til Stop under afspilning

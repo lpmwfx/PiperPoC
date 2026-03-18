@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__rules__get_rule",
+      "mcp__rulestools__setup",
+      "WebFetch(domain:github.com)",
+      "Bash(cargo init:*)",
+      "Bash(cd:*)",
+      "mcp__rulestools__init_project",
+      "Bash(mkdir -p src/adapter src/core src/gateway src/shared src/pal)",
+      "Bash(rm -rf src/state)",
+      "Bash(cargo build:*)",
+      "Bash(gh api:*)",
+      "mcp__rulestools__report_issue"
+    ]
+  }
+}

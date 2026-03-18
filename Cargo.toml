@@ -1,0 +1,15 @@
+[package]
+name = "piper-poc"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+slint = "1"
+cpal = "0.15"
+ringbuf = "0.4"
+hound = "3.5"
+
+[build-dependencies]
+rulestools-documenter = { git = "https://github.com/lpmwfx/RulesTools" }
+rulestools-scanner = { git = "https://github.com/lpmwfx/RulesTools" }
+slint-build = "1"
