@@ -1,4 +1,1 @@
-# 2 issues
-
-[NEW] \\?\D:\REPO\PIPER\PiperPoC\src\main.rs:11:1: error rust/errors/no-expect: expect() in non-test code — use ? or return a typed error [rust/errors.md]
-[NEW] \\?\D:\REPO\PIPER\PiperPoC\src\main.rs:12:1: error rust/errors/no-expect: expect() in non-test code — use ? or return a typed error [rust/errors.md]
+# No issues found
