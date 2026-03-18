@@ -3,44 +3,50 @@
 phase: 1
 id: scaffolding
 
-## Projekt-struktur
+## Fase 1: libpiper integration
 
 - id: 1
-  task: Opret src/ topologi (adapter, core, gateway, shared) med mod.rs filer
-  pass: cargo build kompilerer med tom topologi
-  status: pending
+  task: Byg libpiper fra source via CMake (espeak-ng + onnxruntime)
+  pass: cargo build linker mod piper.dll
+  status: done
 
 - id: 2
   task: Opret FFI bindings til piper.h i src/gateway/piper_ffi_gtw.rs
   pass: Rust typer matcher piper.h structs og funktioner
-  status: pending
-
-## Voice models
+  status: done
 
 - id: 3
-  task: Download da_DK-talesyntese-medium og en_US-lessac-medium ONNX modeller
+  task: Download voice models (da_DK-talesyntese-medium, en_US-lessac-medium)
   pass: .onnx og .onnx.json filer i models/da/ og models/en/
-  status: pending
-
-## UI
+  status: done
 
 - id: 4
-  task: Færdiggør Slint UI (tekst input, voice valg, speed slider, status)
-  pass: slint_build::compile("ui/main.slint") bygger uden fejl
-  status: pending
-
-## Integration
+  task: Implementer audio playback med cpal i src/pal/audio_pal.rs
+  pass: Float-samples fra piper afspilles korrekt
+  status: done
 
 - id: 5
-  task: Wire Slint callbacks til adapter → core → gateway pipeline
-  pass: Tekst syntetiseres og afspilles via cpal
-  status: pending
+  task: Implementer WAV-eksport med hound i src/gateway/wav_gtw.rs
+  pass: Gem-knap producerer valid .wav fil
+  status: done
 
 - id: 6
-  task: Implementer WAV-eksport via hound
-  pass: Gem-knap producerer valid .wav fil
+  task: Wire callbacks: Slint → adapter → core → gateway
+  pass: Tekst syntetiseres og afspilles via GUI
+  status: done
+
+## Fase 2: Rudimentær GUI med slint-ui-templates
+
+- id: 7
+  task: Integrer slint-ui-templates crate (SwiftUI-lignende DSL)
+  pass: UI genereres via template system
+  status: pending
+
+- id: 8
+  task: Erstat manual main.slint med template-genereret UI
+  pass: Samme funktionalitet via slint-ui-templates
   status: pending
 
 ## Blockers
 
-- piper1-gpl skal bygges fra source (CMake + espeak-ng + onnxruntime) — afklar build-strategi
+(ingen — fase 1 complete)

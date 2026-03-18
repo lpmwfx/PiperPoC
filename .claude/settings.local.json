@@ -11,7 +11,28 @@
       "Bash(rm -rf src/state)",
       "Bash(cargo build:*)",
       "Bash(gh api:*)",
-      "mcp__rulestools__report_issue"
+      "mcp__rulestools__report_issue",
+      "Bash(curl -L -o models/da/da_DK-talesyntese-medium.onnx \"https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/da/da_DK/talesyntese/medium/da_DK-talesyntese-medium.onnx?download=true\")",
+      "Bash(curl -L -o models/da/da_DK-talesyntese-medium.onnx.json \"https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/da/da_DK/talesyntese/medium/da_DK-talesyntese-medium.onnx.json?download=true\")",
+      "Bash(curl -L -o models/en/en_US-lessac-medium.onnx \"https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx?download=true\")",
+      "Bash(curl -L -o models/en/en_US-lessac-medium.onnx.json \"https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json?download=true\")",
+      "Bash(cargo search:*)",
+      "Bash(mkdir -p vendor/piper)",
+      "Bash(curl -L -o vendor/piper/piper_win.whl \"https://github.com/OHF-Voice/piper1-gpl/releases/download/v1.4.1/piper_tts-1.4.1-cp39-abi3-win_amd64.whl\")",
+      "Bash(cmake --version)",
+      "Bash(git --version)",
+      "Bash(python3 tools/build_libpiper.py)",
+      "Bash(cmake --build build --config Release)",
+      "Bash(cmake -B build -S . -DCMAKE_INSTALL_PREFIX=build/install)",
+      "Bash(cmake --build build --config Release --target piper)",
+      "Bash(cmake --install build --config Release)",
+      "Bash(dumpbin /exports D:/REPO/PIPER/PiperPoC/vendor/piper/lib/piper.dll)",
+      "Bash(\"C:/Program Files \\(x86\\)/Microsoft Visual Studio/2022/BuildTools/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/dumpbin.exe\" /exports \"D:/REPO/PIPER/PiperPoC/vendor/piper/lib/piper.dll\")",
+      "Bash(python3:*)",
+      "Bash(cp vendor/piper1-gpl/libpiper/build/Release/piper.dll vendor/piper/lib/)",
+      "Bash(cp vendor/piper1-gpl/libpiper/build/Release/piper.lib vendor/piper/lib/)",
+      "Bash(cargo clean:*)",
+      "Bash(ls:*)"
     ]
   }
 }
