@@ -5,14 +5,14 @@
       "name": "fast",
       "kind": "Property",
       "signature": "in property <duration> fast: 150ms;",
-      "line": 4,
+      "line": 5,
       "doc": ""
     },
     {
       "name": "normal",
       "kind": "Property",
       "signature": "in property <duration> normal: 300ms;",
-      "line": 6,
+      "line": 8,
       "doc": ""
     }
   ]

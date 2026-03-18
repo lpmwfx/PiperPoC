@@ -2,7 +2,7 @@
 
 ## `in property <[string]> voices: ["da_DK-talesyntese-medium", "en_US-lessac-medium"];`
 
-*Line 8 · property*
+*Line 9 · property*
 
 **undocumented**
 
@@ -10,7 +10,7 @@
 
 ## `in-out property <int> selected-voice: 0;`
 
-*Line 10 · property*
+*Line 12 · property*
 
 **undocumented**
 
@@ -18,7 +18,7 @@
 
 ## `in-out property <float> speed: 1.0;`
 
-*Line 12 · property*
+*Line 15 · property*
 
 **undocumented**
 
@@ -26,7 +26,7 @@
 
 ## `in property <bool> is-speaking: false;`
 
-*Line 14 · property*
+*Line 18 · property*
 
 **undocumented**
 
@@ -34,7 +34,7 @@
 
 ## `in property <string> status: "Klar";`
 
-*Line 16 · property*
+*Line 21 · property*
 
 **undocumented**
 
@@ -42,7 +42,7 @@
 
 ## `callback synthesize(string);`
 
-*Line 19 · callback*
+*Line 25 · callback*
 
 **undocumented**
 
@@ -50,7 +50,7 @@
 
 ## `callback stop();`
 
-*Line 21 · callback*
+*Line 28 · callback*
 
 **undocumented**
 
@@ -58,7 +58,7 @@
 
 ## `callback save-wav(string);`
 
-*Line 23 · callback*
+*Line 31 · callback*
 
 **undocumented**
 
@@ -66,7 +66,7 @@
 
 ## `export component AppWindow inherits Window {`
 
-*Line 27 · component*
+*Line 36 · component*
 
 **undocumented**
 

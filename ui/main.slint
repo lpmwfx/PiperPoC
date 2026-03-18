@@ -5,25 +5,34 @@ import { ComboBox, Button, Slider, TextEdit, ProgressIndicator } from "std-widge
 /// Application state exposed to Rust.
 export global AppState {
     /// List of available voice names.
+    /// property `voices`.
     in property <[string]> voices: ["da_DK-talesyntese-medium", "en_US-lessac-medium"];
     /// Index of selected voice.
+    /// property `selected-voice`.
     in-out property <int> selected-voice: 0;
     /// Speech rate where 0.5 is fast and 2.0 is slow.
+    /// property `speed`.
     in-out property <float> speed: 1.0;
     /// Whether synthesis is currently running.
+    /// property `is-speaking`.
     in property <bool> is-speaking: false;
     /// Status text shown to user.
+    /// property `status`.
     in property <string> status: "Klar";
 
     /// Synthesize text into speech audio.
+    /// callback `synthesize`.
     callback synthesize(string);
     /// Stop current playback.
+    /// callback `stop`.
     callback stop();
     /// Save synthesized audio as WAV file.
+    /// callback `save-wav`.
     callback save-wav(string);
 }
 
 /// Main application window for Piper TTS testing.
+/// component `AppWindow`.
 export component AppWindow inherits Window {
     title: "Piper TTS PoC";
     width: 700px;
