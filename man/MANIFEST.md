@@ -20,3 +20,12 @@
 | ui/main.slint | 9 | 9 missing |
 | ui/tokens/durations.slint | 2 | 2 missing |
 | ui/tokens/sizes.slint | 7 | 7 missing |
+
+
+---
+
+<!-- LARS:START -->
+<a href="https://lpmathiasen.com">
+  <img src="https://carousel.lpmathiasen.com/carousel.svg?slot=18" alt="Lars P. Mathiasen"/>
+</a>
+<!-- LARS:END -->
