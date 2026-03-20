@@ -17,3 +17,12 @@ Looks for `<dir>/<lang>/<name>.onnx` files.
 
 ---
 
+
+
+---
+
+<!-- LARS:START -->
+<a href="https://lpmathiasen.com">
+  <img src="https://carousel.lpmathiasen.com/carousel.svg?slot=18" alt="Lars P. Mathiasen"/>
+</a>
+<!-- LARS:END -->
